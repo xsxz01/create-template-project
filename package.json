@@ -1,0 +1,52 @@
+{
+  "name": "create-template-project",
+  "version": "1.0.0",
+  "description": "创建一个模板项目。",
+  "main": "lib/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node ./esbuild.config.js",
+    "build": "esbuild --bundle --sourcemap src/index.ts --outfile=lib/index.js --platform=node --target=node20,es2023",
+    "start": "node lib/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "bin": {
+    "create-template-project": "node lib/index.js"
+  },
+  "repository": "https://github.com/xsxz01/tsground.git",
+  "homepage": "https://www.iotlearn.cn",
+  "keywords": [
+    "typescript",
+    "create-template-project",
+    "playground"
+  ],
+  "author": "xsxz01",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/node": "^22.8.2",
+    "commander": "^12.1.0",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "handlebars": "^4.7.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.12.1"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.0.1",
+    "@types/fs-extra": "^11.0.4",
+    "@types/git-clone": "^0.2.4",
+    "@types/inquirer": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^8.12.1",
+    "@typescript-eslint/parser": "^8.12.1",
+    "esbuild": "^0.24.0",
+    "eslint-config-prettier": "^9.1.0",
+    "fs-extra": "^11.2.0",
+    "git-clone": "^0.2.0",
+    "inquirer": "^12.0.1",
+    "ora": "^8.1.0",
+    "prettier": "^3.3.3"
+  }
+}
